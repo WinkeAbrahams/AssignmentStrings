@@ -10,21 +10,17 @@ goal_0 = 32
 goal_1 = 54
 
 scorers = player_scored0 + ' ' + str(goal_0) + ', ' + player_scored1 + ' ' + str(goal_1)
-print(scorers)
+
 
 report = f'{player_scored0} scored in the {goal_0}nd minute\n{player_scored1} scored in the {goal_1}th minute'
 
 player = 'Ronald Koeman'
 first_name = player[:player.find(' ')]
+last_name = player[((player.find(' '))+1):]
 
-last_name = player[(player.find('K')):len(player)]
-last_name_len = len(player[player.find('K'):])
+last_name_len = len(player[(player.find(' ')+1):])      # wordt gevraagd bij de wincpy check
 
-name_short = player[0] + '. ' + last_name
+name_short = f'{player[0]}. {last_name}'
 
 chant =  ((first_name + '! ') * len(first_name)).rstrip()
 good_chant = chant[-1] != ' '
-
-
-
-
